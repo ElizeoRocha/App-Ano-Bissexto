@@ -76,7 +76,7 @@ export class AppComponent {
   }
 
   getAno(){
-    this.httpClient.get(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz/`+this.anoInt)
+    this.httpClient.get(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz`+this.anoInt)
     .subscribe(
       (data:any[])=>{
         
