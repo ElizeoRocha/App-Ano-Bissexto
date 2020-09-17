@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class UserService {
 
-  private Uri :string = "http://localhost:8080/"
+  private Uri :string = "http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz/"
 
   public selectUser = null;
   public nextUserId = null;
