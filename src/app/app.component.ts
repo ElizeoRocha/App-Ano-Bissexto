@@ -67,7 +67,7 @@ export class AppComponent {
 
   postProfile(){
     
-    this.httpClient.post(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz`, {ano:this.anoInt})
+    this.httpClient.post(`http://goanobissexto-gobissexto.paulo-dev-apps.gncloud.nz`, {ano:this.anoInt})
     .subscribe(
       (data:any)=>{
         console.log(data)
@@ -76,7 +76,7 @@ export class AppComponent {
   }
 
   getAno(){
-    this.httpClient.get(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz/`+this.anoInt)
+    this.httpClient.get(`http://goanobissexto-gobissexto.paulo-dev-apps.gncloud.nz/`+this.anoInt)
     .subscribe(
       (data:any[])=>{
         
