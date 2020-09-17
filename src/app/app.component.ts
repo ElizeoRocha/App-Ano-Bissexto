@@ -67,7 +67,7 @@ export class AppComponent {
 
   postProfile(){
     
-    this.httpClient.post(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz`, {ano:this.anoInt})
+    this.httpClient.post(`http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz/`, {ano:this.anoInt})
     .subscribe(
       (data:any)=>{
         console.log(data)
