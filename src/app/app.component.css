@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.form{
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    
+}
+.form input{
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    color: grey;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid gray;
+    
+}
+
+.form label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name{
+    font-size: 20px;
+    position: absolute;
+    color: gray;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name{
+    transform: translateY(-130%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after, .form input:valid + .label-name::after{
+    transform: translateX(0%);
+
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+#conferir{
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(to right,#52CFCF, #2253e3 );
+    border: none;
+}
+
+.alert{
+    height: 60px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    
+}
+
+
+
+.card{
+    justify-content: center;
+    height: 100%; 
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+

@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+  <h2 class="mt-5 col-6 text-center text-secondary">CONFIRA SE O ANO É BISSEXTO</h2>        
+  
+          <div class="card my-5 col-6 shadow p-3 ">
+          <div class="form mt-3">
+              <input type="number" name="name" (keyup)="onNameKeyUp($event)" autocomplete="off" onkeydown="javascript: return event.keyCode === 8 ||
+              event.keyCode === 46 ? true : !isNaN(Number(event.key))"  required>
+              <label for="name" class="label-name">
+                  <span class="content-name">Digite a Ano:</span>
+              </label>
+          </div>
+
+          <button class="btn btn-primary my-5 shadow p-3 " id="conferir" (click)= "Validator()">CONFERIR</button>
+
+          <div class="alert alert-primary col-12 " role="alert" *ngIf="ano != null">
+              <span>{{ano}} {{bissexto}}, o proximo ano bissexto será em {{proximoAno}}</span> 
+          </div>
+           
+          <div *ngIf="erroMessage != null "class="alert alert-danger col-12" role="alert">
+              <span>{{erroMessage}}</span>
+          </div>
+      </div>     
+
+<div class="col-1"></div>
+
+<div class=" col-md-6 mt-3" *ngIf="users">
+  <table class="table table-bordered table-hover ">
+      <thead class="text-secondary">
+          <th scope="col">Ano</th>
+          <th scope="col">Ano Bissexto?</th>
+          <th scope="col">Proximo Ano Bissexto</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of users.slice().reverse()">
+          <td>{{user.ano}}        </td>
+          <td>{{user.bissexto}}   </td>
+          <td>{{user.proximoano}} </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+</body>
+
